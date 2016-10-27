@@ -1,2 +1,2 @@
-./motion_upload.sh
-./motion_run.sh
+./porch_upload.sh
+./porch_run.sh

@@ -22,15 +22,15 @@ try:
     while True:
         i = GPIO.input(readPIR)
         if i == 0:  # When output from motion sensor is LOW
-            print "No Trick-or-treaters", i
+            print("No Trick-or-treaters", i)
             GPIO.output(outputPIR, 0)  # Turn OFF LED
 
         elif i == 1:  # When output from motion sensor is HIGH
-            print "Trick-or-treaters detected", i
+            print("Trick-or-treaters detected", i)
             GPIO.output(outputPIR, 1)  # Turn ON LED
 
         time.sleep(1)
-        print datetime.datetime.now()
+        print (datetime.datetime.now())
         print
 finally:
     GPIO.cleanup()         # clean up after yourself
