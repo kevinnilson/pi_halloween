@@ -1,2 +1,4 @@
-./motion_upload.sh
-./motion_run.sh
+#!/usr/bin/env bash
+
+./porch_upload.sh
+./porch_run.sh
