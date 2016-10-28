@@ -21,13 +21,21 @@ GPIO.setup(outputPIR, GPIO.OUT)  # LED output pin
 try:
     while True:
         i = GPIO.input(readPIR)
-        if i == 0:  # When output from motion sensor is LOW
+        if i == 0:
+            # When output from motion sensor is LOW
             print("No Trick-or-treaters", i)
             GPIO.output(outputPIR, 0)  # Turn OFF LED
 
         elif i == 1:  # When output from motion sensor is HIGH
+            x=0
             print("Trick-or-treaters detected", i)
-            GPIO.output(outputPIR, 1)  # Turn ON LED
+            # Turn ON LED
+            while x<5:
+                GPIO.output(outputPIR, 1)
+                time.sleep(3)
+                GPIO.output(outputPIR, 0)
+                time.sleep(.1)
+                x=x+1
 
         time.sleep(1)
         print (datetime.datetime.now())
