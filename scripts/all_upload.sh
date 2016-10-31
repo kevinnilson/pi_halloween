@@ -12,7 +12,7 @@ send "cd halloween\r"
 
 
 expect ">"
-send "put ../stairs.py\r"
+send "put ../pumpkin.py\r"
 
 
 expect ">"
